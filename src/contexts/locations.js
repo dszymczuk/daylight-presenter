@@ -34,7 +34,9 @@ export const LocationContextProvider = ({ children }) => {
   };
 
   const removeLocation = (index) => {
-
+    const newLocations  = [...locations];
+    newLocations.splice(index,1);
+    setLocations(newLocations)
   };
 
 
