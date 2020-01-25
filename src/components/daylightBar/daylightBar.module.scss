@@ -1,0 +1,13 @@
+.progressBarWrapper {
+  :global(.progress-bar.bg-success) {
+    background-color: black !important;
+  }
+}
+
+
+.labels {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 80%;
+}
