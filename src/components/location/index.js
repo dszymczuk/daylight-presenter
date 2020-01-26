@@ -5,6 +5,7 @@ import Coords from "../coords";
 import styles from './location.module.scss';
 import axios from 'axios';
 import { Location as LocationContext } from "../../contexts/locations";
+import { EditForm } from "../../form/location";
 
 
 const Location = ({ lat, lng, name, date, index }) => {
@@ -13,6 +14,7 @@ const Location = ({ lat, lng, name, date, index }) => {
     sunrise: "",
     sunset: "",
   });
+  const [editMode, setEditMode] = useState(false);
 
   useEffect(() => {
     const getLocationData = async () => {
@@ -36,6 +38,13 @@ const Location = ({ lat, lng, name, date, index }) => {
     getLocationData();
   }, [lat, lng, date]);
 
+  const initialFormValues = {
+    name,
+    lat,
+    lng,
+    date
+  };
+
 
   return (
     <Card>
@@ -43,12 +52,14 @@ const Location = ({ lat, lng, name, date, index }) => {
         <div className={styles.header}>
           <div>{name} <Coords lat={lat} lng={lng}/></div>
           <div>{date}
-            <Button variant="outline-danger" size="sm" onClick={() => removeLocation(index)}>Remove</Button>
+            <Button variant="warning" size="sm" onClick={() => setEditMode(true)}>Edit</Button>
+            <Button variant="danger" size="sm" onClick={() => removeLocation(index)}>Remove</Button>
           </div>
         </div>
       </Card.Header>
       <Card.Body>
-        <DaylightBar daylight={daylightData}/>
+        {!editMode && <DaylightBar daylight={daylightData}/>}
+        {editMode && <EditForm initialValues={initialFormValues} index={index} onSubmitCb={() => setEditMode(false)}/>}
       </Card.Body>
     </Card>
   )

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 import styles from './App.module.scss';
 import Location from "./components/location";
-import LocationForm from "./form/location";
+import { AddForm as AddLocationForm} from "./form/location";
 import LocationContextProvider, { Location as LocationContext } from "./contexts/locations";
 import ErrorBoundary from "./components/errorBoundary";
 
@@ -28,7 +28,7 @@ const App = () => {
         }
         <Row>
           <Col>
-            <LocationForm/>
+            <AddLocationForm/>
           </Col>
         </Row>
       </Container>
