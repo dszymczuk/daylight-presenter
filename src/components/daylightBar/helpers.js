@@ -1,0 +1,1 @@
+export const calculateMinutes = (fn) => Math.abs(Math.floor(fn));
