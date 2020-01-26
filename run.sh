@@ -1,5 +1,18 @@
-# Please put a proper bash command that will build and run you application
-# For example if you build a Java application:
-# mvn clean package
-# java -jar target/your-application-1.0-SNAPSHOT.jar
-echo Building and running the application
+GREEN='\033[1;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+echo ""
+printf "${YELLOW}"
+printf "Building application"
+echo ""
+npm run build
+echo ""
+printf "${NC}\n"
+
+printf "${GREEN}"
+printf "Starting application"
+echo ""
+npm run start:prod
+echo ""
+printf "${NC}\n"
