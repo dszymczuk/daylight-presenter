@@ -5,7 +5,7 @@ import React from "react";
 import { calculateMinutes } from "./helpers";
 
 const dayMinutes = 60 * 24;
-const initialDate = moment().hour(0).minute(0).millisecond(0);
+const initialDate = moment().hour(0).minute(0).second(0).millisecond(0);
 
 const DaylightDuringDay = ({ sunrise, sunset }) => {
   const momentSunrise = moment(sunrise, 'H:mm:ss A');
