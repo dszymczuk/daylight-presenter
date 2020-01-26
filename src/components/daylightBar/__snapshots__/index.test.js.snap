@@ -11,10 +11,10 @@ exports[`renders Daylight when sunset is after sunrise 1`] = `
       <div
         aria-valuemax="1440"
         aria-valuemin="0"
-        aria-valuenow="383.87491666666665"
+        aria-valuenow="383.8967"
         class="progress-bar bg-success"
         role="progressbar"
-        style="width: 26.658%;"
+        style="width: 26.659%;"
       />
       <div
         aria-valuemax="1440"
@@ -27,10 +27,10 @@ exports[`renders Daylight when sunset is after sunrise 1`] = `
       <div
         aria-valuemax="1440"
         aria-valuemin="0"
-        aria-valuenow="287.49175"
+        aria-valuenow="287.46996666666666"
         class="progress-bar bg-success"
         role="progressbar"
-        style="width: 19.965%;"
+        style="width: 19.963%;"
       />
     </div>
     <div
@@ -62,10 +62,10 @@ exports[`renders Daylight when sunset is after sunrise 2`] = `
       <div
         aria-valuemax="1440"
         aria-valuemin="0"
-        aria-valuenow="432.5083"
+        aria-valuenow="432.5300833333333"
         class="progress-bar bg-warning"
         role="progressbar"
-        style="width: 30.035%;"
+        style="width: 30.037%;"
       />
       <div
         aria-valuemax="1440"
@@ -78,10 +78,10 @@ exports[`renders Daylight when sunset is after sunrise 2`] = `
       <div
         aria-valuemax="1440"
         aria-valuemin="0"
-        aria-valuenow="335.1250333333333"
+        aria-valuenow="335.10325"
         class="progress-bar bg-warning"
         role="progressbar"
-        style="width: 23.273%;"
+        style="width: 23.271%;"
       />
     </div>
     <div
@@ -113,10 +113,10 @@ exports[`renders DaylightAcrossDays 1`] = `
       <div
         aria-valuemax="1440"
         aria-valuemin="0"
-        aria-valuenow="1152.5083"
+        aria-valuenow="1152.5300833333333"
         class="progress-bar bg-warning"
         role="progressbar"
-        style="width: 80.035%;"
+        style="width: 80.037%;"
       />
       <div
         aria-valuemax="1440"
@@ -129,10 +129,10 @@ exports[`renders DaylightAcrossDays 1`] = `
       <div
         aria-valuemax="1440"
         aria-valuemin="0"
-        aria-valuenow="1055.1250333333332"
+        aria-valuenow="1055.10325"
         class="progress-bar bg-warning"
         role="progressbar"
-        style="width: 73.273%;"
+        style="width: 73.271%;"
       />
     </div>
     <div
@@ -164,10 +164,10 @@ exports[`renders DaylightDuringDay 1`] = `
       <div
         aria-valuemax="1440"
         aria-valuemin="0"
-        aria-valuenow="383.87491666666665"
+        aria-valuenow="383.8967"
         class="progress-bar bg-success"
         role="progressbar"
-        style="width: 26.658%;"
+        style="width: 26.659%;"
       />
       <div
         aria-valuemax="1440"
@@ -180,10 +180,10 @@ exports[`renders DaylightDuringDay 1`] = `
       <div
         aria-valuemax="1440"
         aria-valuemin="0"
-        aria-valuenow="287.49175"
+        aria-valuenow="287.46996666666666"
         class="progress-bar bg-success"
         role="progressbar"
-        style="width: 19.965%;"
+        style="width: 19.963%;"
       />
     </div>
     <div
