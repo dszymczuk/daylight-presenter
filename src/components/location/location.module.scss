@@ -2,4 +2,8 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+
+  :global(.btn){
+    margin-left: 10px;
+  }
 }
