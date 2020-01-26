@@ -2,18 +2,20 @@ import moment from "moment";
 import styles from "./daylightBar.module.scss";
 import { ProgressBar } from "react-bootstrap";
 import React from "react";
+import { calculateMinutes } from "./helpers";
 
 const dayMinutes = 60 * 24;
-const initialDate = moment().hour(0).minute(0);
-const endOfDay = moment().hour(23).minute(59);
+const initialDate = moment().hour(0).minute(0).millisecond(0);
+const endOfDay = moment().hour(23).minute(59).millisecond(0);
+
 
 const DaylightAcrossDays = ({ sunrise, sunset }) => {
   const momentSunrise = moment(sunrise, 'H:mm:ss A');
   const momentSunset = moment(sunset, 'H:mm:ss A');
-  const minutesAfterSunrise = moment.duration(endOfDay.diff(momentSunrise)).asMinutes();
+  const minutesAfterSunrise = calculateMinutes(moment.duration(endOfDay.diff(momentSunrise)).asMinutes());
 
-  const minutesFromNewDayToEndOfSunset = moment.duration(momentSunset.diff(initialDate)).asMinutes();
-  const minutesBetweenSunriseAndSunset = moment.duration(momentSunrise.diff(momentSunset)).asMinutes();
+  const minutesFromNewDayToEndOfSunset = calculateMinutes(moment.duration(momentSunset.diff(initialDate)).asMinutes());
+  const minutesBetweenSunriseAndSunset = calculateMinutes(moment.duration(momentSunrise.diff(momentSunset)).asMinutes());
 
   return (
     <div className={styles.progressBarWrapper}>
