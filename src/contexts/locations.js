@@ -29,13 +29,15 @@ export const LocationContextProvider = ({ children }) => {
     setLocations([...locations, newLocation])
   };
 
-  const updateLocation = ({ location, index }) => {
-
+  const updateLocation = (location, index) => {
+    const newLocations = [...locations];
+    newLocations[index] = location;
+    setLocations(newLocations)
   };
 
   const removeLocation = (index) => {
-    const newLocations  = [...locations];
-    newLocations.splice(index,1);
+    const newLocations = [...locations];
+    newLocations.splice(index, 1);
     setLocations(newLocations)
   };
 
