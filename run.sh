@@ -1,6 +1,14 @@
 GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
+NC='\033[0m'
+
+echo ""
+printf "${YELLOW}"
+printf "Install packages"
+echo ""
+npm install
+echo ""
+printf "${NC}\n"
 
 echo ""
 printf "${YELLOW}"
