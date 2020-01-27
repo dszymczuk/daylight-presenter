@@ -6,11 +6,11 @@ import { Location as LocationContext } from "../../contexts/locations";
 import moment from 'moment';
 import validationSchema from './validationSchema';
 import Input from "../../components/input";
-import initialValues from "./initialValues";
+import initValues from "./initialValues";
 
 const dateFormat = "DD.MM.YYYY";
 
-const AddLocationForm = () => {
+const AddLocationForm = ({initialValues = initValues}) => {
   const { addLocation } = useContext(LocationContext);
 
   return (
